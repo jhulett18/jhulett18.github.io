@@ -1,0 +1,121 @@
+:root{
+    --primary-color: #2eafd1;
+    --secondary-color: #fefefe;
+    --black: #11101b;
+    
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Telma', cursive;
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+/* Nav Link Customization  */
+.nav-bar ul li a {
+    display: block;
+    font-family: 'Telma', cursive;
+    color: var(--secondary-color);
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover{
+    color: var(--primary-color);
+
+}
+
+.nav-bar .active-container{
+    background: var(--primary-color);
+    width:140px;
+    height:55px;
+    border-width:5px;
+    /* color:#fff; */
+    /* border-color:#18ab29; */
+    /* font-weight:bold; */
+    border-top-right-radius:11px;
+    border-bottom-left-radius:11px;
+    text-shadow: 1px 1px 0px rgba(30, 56, 82, 1);
+}
+
+.nav-bar ul a.active{
+    font-size: 20px;
+    color: var(--secondary-color);
+    /* background: var(--primary-color);  */
+}
+
+@media only screen and (max-width: 1320px) {
+    header{
+        padding: 0 30px;
+
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 40px; 
+        height: 3px;
+        background: var(--secondary-color);
+        margin: 6px 0; 
+    }
+    .nav-bar{
+        /* display: none; */
+        height: 450;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: var(--black);
+        transition: 0.3s;
+    }
+    .nav-bar ul li a:hover{
+        color: var(--primary-color);
+    
+    }
+
+    /* Hamburger Menu */
+    .nav-bar.active {
+        height: 450px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .nav-bar ul li a{
+        
+        margin-bottom: 20px;
+        
+    }
+} 
+
